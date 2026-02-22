@@ -1,0 +1,83 @@
+<!-- BY USING THE GEMINI V 3.1 -->
+
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        /* 1. Universal Selector: Dark background and Yellow text as discussed */
+        * {
+            background-color: black;
+            color: rgb(196, 210, 0);
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Styling the Form container to make it attractive */
+        form {
+            border: 2px solid yellow;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            margin: 50px auto; /* Centers the form on screen */
+            text-align: left;
+        }
+
+        /* 3. Styling Inputs to make them stand out */
+        input {
+            border: 1px solid yellow;
+            border-radius: 5px;
+            padding: 8px;
+            width: 90%;
+            margin-top: 5px;
+        }
+
+        /* 4. Styling the Sign In button */
+        button {
+            background-color: yellow;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* 5. Space between sections */
+        .spacing {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ACTION: Data will be sent to the server (Amazon used as example in class) -->
+    <form action="https://google.in/" method="get">
+        
+        <h2>Login Form</h2>
+
+        <!-- NAME SECTION -->
+        <label for="username">Name:</label><br>
+        <input type="text" id="username" name="username" placeholder="Example: upendra"required>
+        <br><br>
+
+        <!-- EMAIL SECTION -->
+        <label for="useremail">Email:</label><br>
+        <input type="email" id="useremail" name="useremail" placeholder="example@gmail.com" required>
+        <br><br>
+
+        <!-- PASSWORD SECTION -->
+        <label for="userpassword">Password:</label><br>
+        <input type="password" id="userpassword" name="userpassword" placeholder="Min 8 characters" required>
+        <br><br>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit">Sign In</button>
+
+    </form>
+
+</body>
+</html>
+
+
+

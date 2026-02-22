@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Information Table</title>
+
+
+<!Google Font>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* Page Styling */
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading */
+h2{
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+
+/* Table Container */
+.container{
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* Table Design */
+table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+/* Header */
+th{
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+}
+
+/* Data Rows */
+tbody tr{
+    background: white;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+tbody tr:hover{
+    transform: scale(1.01);
+}
+
+/* Data Cells */
+td{
+    padding: 14px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* Left Border Highlight */
+td:first-child{
+    border-left: 5px solid #4facfe;
+    border-radius: 10px 0 0 10px;
+}
+
+/* Right Border */
+td:last-child{
+    border-radius: 0 10px 10px 0;
+}
+
+/* Department Style */
+.dept{
+    font-weight: bold;
+    color: #dd2476;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Student Information Table</h2>
+
+<div class="container">
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Percentage</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>101</td>
+<td>Prathap</td>
+<td class="dept">CSE</td>
+<td>85%</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Rahul</td>
+<td class="dept">EEE</td>
+<td>82%</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Anil</td>
+<td class="dept">IT</td>
+<td>88%</td>
+</tr>
+
+<tr>
+<td>104</td>
+<td>Kiran</td>
+<td class="dept">ECE</td>
+<td>80%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>  
+
+ 
+
+<!-- BY USING THE GEMINI V:3.1 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Table</title>
+    <style>
+        /* 1. Universal Selector for overall look */
+        * {
+            background-color: black;
+            color: yellow;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Styling the Table */
+        table {
+            border-collapse: collapse; /* Removes double borders */
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        /* 3. Styling Headers and Data Cells */
+        th, td {
+            border: 1px solid red; /* Attractive red border */
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* 4. Table Body - Colorful Background */
+        tbody {
+            background-color: #000080; /* Navy Blue as discussed in class */
+        }
+
+        /* 5. Table Header - Different Color */
+        th {
+            background-color: #333; /* Darker grey for headings */
+        }
+
+        /* 6. Caption Styling */
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            color: cyan;
+        }
+
+        /* 7. Footer Styling */
+        tfoot td {
+            color: white;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>Java Full Stack Web Development Time Table</caption>
+        
+        <!-- THEAD: Table Head for the first row -->
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>9 to 10 AM</th>
+                <th>10 to 11 AM</th>
+                <th>11 to 12 PM</th>
+                <th>1 to 2 PM</th>
+                <th>2 to 4 PM</th>
+            </tr>
+        </thead>
+
+        <!-- TBODY: The main content of the table -->
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>MySQL</td>
+                <td>MySQL</td>
+                <td>MySQL</td>
+                <!-- LUNCH BREAK: Stretching across 5 rows -->
+                <td rowspan="5">LUNCH BREAK</td>
+                <td>MySQL</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <!-- PROJECT CLASS: Stretching across 2 columns -->
+                <td colspan="2">Project Class</td>
+                <td>Java</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>HTML</td>
+                <td>HTML</td>
+                <td>CSS</td>
+                <!-- FRONT END: Stretching across 2 rows -->
+                <td rowspan="2">Front-end Project</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Java</td>
+                <td>Java</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <!-- Stretching across 3 columns -->
+                <td colspan="3">Aptitude & Soft Skills</td>
+                <td>Mock Test</td>
+            </tr>
+        </tbody>
+
+        <!-- TFOOT: Table Footer for the note -->
+        <tfoot>
+            <tr>
+                <!-- Stretching across all 6 columns -->
+                <td colspan="6" style="text-align: center; padding: 5px;">
+                    Note: Saturday & Sunday is a Holiday
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html> 
+
+<!--  BY USING THE CLAUDE MODEL V:4.6 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        /* Universal selector for dark theme */
+        * {
+            background-color: black;
+            color: yellow;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Table styling */
+        table {
+            border: 2px solid red;
+            cell-padding: 5px;
+            cell-spacing: 0;
+        }
+        
+        /* TH and TD styling */
+        th, td {
+            padding: 20px;
+            border: 1px solid red;
+            border-radius: 4px;
+        }
+        
+        /* Body background styling */
+        tbody {
+            background-color: navy;
+        }
+        
+        /* Keep headers black background */
+        th {
+            background-color: black;
+        }
+        
+        /* Footer text alignment */
+        tfoot td {
+            text-align: center;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Table Caption -->
+        <caption>Java Full Stack Web Development Time Table</caption>
+        
+        <!-- Table Head -->
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>9 to 10 A.M.</th>
+                <th>10 to 11 A.M.</th>
+                <th>11 to 12 P.M.</th>
+                <th>1 to 2 P.M.</th>
+                <th>2 to 4 P.M.</th>
+            </tr>
+        </thead>
+        
+        <!-- Table Body -->
+        <tbody>
+            <!-- Monday Row -->
+            <tr>
+                <td>Monday</td>
+                <td>MySQL</td>
+                <td>Java</td>
+                <td>HTML</td>
+                <td rowspan="5">Lunch Break</td>
+                <td>Project Work</td>
+            </tr>
+            
+            <!-- Tuesday Row -->
+            <tr>
+                <td>Tuesday</td>
+                <td>Java</td>
+                <td colspan="2">Project Class</td>
+                <td>CSS</td>
+            </tr>
+            
+            <!-- Wednesday Row -->
+            <tr>
+                <td>Wednesday</td>
+                <td>MySQL</td>
+                <td>Java</td>
+                <td>HTML</td>
+                <td rowspan="2">Front End Project</td>
+            </tr>
+            
+            <!-- Thursday Row -->
+            <tr>
+                <td>Thursday</td>
+                <td>Java</td>
+                <td colspan="2">Project Class</td>
+            </tr>
+            
+            <!-- Friday Row -->
+            <tr>
+                <td>Friday</td>
+                <td>MySQL</td>
+                <td>Java</td>
+                <td>HTML</td>
+                <td>CSS</td>
+            </tr>
+        </tbody>
+        
+        <!-- Table Footer -->
+        <tfoot>
+            <tr>
+                <td colspan="6">Note: Saturday Sunday is a holiday</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
