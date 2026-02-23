@@ -1,0 +1,126 @@
+/* Universal Layout */
+* {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    background-color: #1e1e3f;
+    padding: 15px;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 1px yellow;
+    box-shadow: 0px 6px 25px rgba(255, 255, 0, 0.3);
+}
+
+/* Horizontal Line */
+hr {
+    border: 2px solid yellow;
+    width: 60%;
+    margin: 20px auto;
+}
+
+/* Table Layout */
+form {
+    width: 60%;
+    margin: auto;
+    background-color: #111122;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.4);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 12px 10px;
+    vertical-align: middle;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    color: #ffdd00;
+}
+
+/* Inputs, Dropdowns, Radio Buttons */
+input {
+    background-color: #181818;
+    border: 2px solid #ff8800;
+    border-radius: 8px;
+    padding: 8px;
+    width: 90%;
+    color: white;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus Effects */
+input:focus {
+    outline: none;
+    border: 2px solid #00bfff;
+    box-shadow: 0 0 10px #00bfff;
+}
+
+/* Hover for Inputs */
+input:hover {
+    background-color: #252550;
+    border: 2px solid #ffc107;
+}
+
+/* Submit Button Styles */
+button {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect on Button */
+button:hover {
+    background-color: gold;
+    box-shadow: 0px 0px 15px yellow;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #181818;
+    padding: 12px;
+    font-size: 14px;
+    border-top: 1px solid yellow;
+}
+
+/* Highlight Required Fields */
+input:required {
+    border-color: red;
+}
+
+input:optional {
+    border-color: #888;
+}
+
+/* Gender Radio Buttons */
+input[type="radio"] {
+    width: auto;
+    margin-left: 10px;
+}
+
+/* Placeholder Styling */
+::placeholder {
+    color: #aaa;
+    font-style: italic;
+    opacity: 0.8;
+}

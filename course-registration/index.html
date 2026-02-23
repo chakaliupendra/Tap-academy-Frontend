@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon (small icon) -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+<link href="./style.css">
+</head>
+<body>
+     <!-- ACTION: Data will be sent to the server (Amazon used as example in class) -->
+    <form action="https://thetapacademy.com/" method="get">
+        
+
+    <h1>COURSE REGISTRATION FORM</h1>
+    <hr>
+
+    <!-- Registration Form Starts -->
+    <form action="#" method="post">
+
+        <table>
+            <!-- Full Name Row -->
+            <tr>
+                <td><label for="fullname">Full Name:</label></td>
+                <td>
+                    <input type="text" id="fullname" name="fullname" 
+                        placeholder="Ex: Upendra" required>
+                </td>
+            </tr>
+
+            <!-- Middle Name Row -->
+            <tr>
+                <td><label for="middlename">Middle Name:</label></td>
+                <td>
+                    <input type="text" id="middlename" name="middlename" 
+              
+                    placeholder="Ex: Kumar">
+                </td>
+            </tr>
+
+            <!-- Email Row -->
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td>
+                    <input type="email" id="email" name="email" 
+                        placeholder="Ex: upendra@gmail.com" required>
+                </td>
+            </tr>
+
+            <!-- Password Row -->
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td>
+                    <input type="password" id="password" name="password" 
+                        placeholder="Ex: upendra@123" required>
+                </td>
+            </tr>
+
+            <!-- Date of Birth Row -->
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td>
+                    <input type="date" id="dob" name="dob" required>
+                </td>
+            </tr>
+
+            <!-- Gender Row -->
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" value="Male" id="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" value="Female" id="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" name="gender" value="Others" id="others">
+                    <label for="others">Others</label>
+                </td>
+            </tr>
+
+            <!-- Mobile Number Row -->
+            <tr>
+                <td><label for="mobile">Mobile Number:</label></td>
+                <td>
+                    <input type="tel" id="mobile" name="mobile" 
+                        placeholder="Ex: 9876543210" required>
+                </td>
+            </tr>
+
+            <!-- Submit Button Row -->
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button type="submit">Register</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <footer>
+        <p>© 2026 TAP Academy | Designed by Upendra</p>
+    </footer>
+
+</body>
+</html>
