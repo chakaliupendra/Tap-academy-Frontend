@@ -1,0 +1,118 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background of the whole page */
+body {
+    background-color: #fdf5e6; /* Old Lace / Creamy color */
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Menu Card Container */
+.menu-container {
+    background-color: #ffffff;
+    max-width: 500px;
+    width: 100%;
+    border: 8px solid #138808; /* Indian Green */
+    border-top-color: #ff9933; /* Indian Saffron */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #ff9933;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #555;
+    font-style: italic;
+}
+
+.divider {
+    height: 4px;
+    background: linear-gradient(to right, #ff9933, #ffffff, #138808);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+/* Section/Category Styling */
+.category-title {
+    background-color: #138808;
+    color: white;
+    padding: 5px 15px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.menu-section {
+    margin-bottom: 30px;
+}
+
+/* Menu Items Styling */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    transition: 0.3s;
+}
+
+/* Interactive Hover effect */
+.menu-item:hover {
+    background-color: #fff9f0;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.item-info h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.item-info p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* Price Tag Styling */
+.price {
+    background-color: #ff9933;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    border-top: 2px dashed #138808;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
