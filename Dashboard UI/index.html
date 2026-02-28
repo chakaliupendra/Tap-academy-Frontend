@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Modern Dashboard UI</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* -------- Background -------- */
+body{
+ margin:0;
+ font-family:'Poppins',sans-serif;
+ background:linear-gradient(135deg,#eef2ff,#fdf2f8,#ecfeff);
+}
+
+/* Layout */
+.container{
+ display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+ width:240px;
+ height:100vh;
+ background: blue;
+ color: rgb(119, 128, 0);
+ padding:20px;
+ position:fixed;
+}
+
+.logo{
+ font-size:22px;
+ font-weight:600;
+ text-align:center;
+ margin-bottom:30px;
+}
+
+.sidebar ul{
+ list-style:none;
+ padding:0;
+}
+
+.sidebar ul li{
+ padding:12px;
+ margin:10px 0;
+ border-radius:10px;
+ background:#f0ec0d;
+ cursor:pointer;
+ transition:0.3s;
+}
+
+.sidebar ul li:hover{
+ background:#ec0e9a;
+}
+
+/* Main */
+.main{
+ margin-left:260px;
+ padding:25px;
+ width:100%;
+}
+
+/* Cards */
+.cards{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:20px;
+}
+
+.card{
+ padding:20px;
+ border-radius:16px;
+ color: white;
+ box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card1{background:linear-gradient(135deg,#6366f1,#8b5cf6);}
+.card2{background:linear-gradient(135deg,#22c55e,#4ade80);}
+.card3{background:linear-gradient(135deg,#f59e0b,#fb923c);}
+.card4{background:linear-gradient(135deg,#ec4899,#f43f5e);}
+
+.card h3{
+ margin:0;
+ font-size:15px;
+}
+
+.card p{
+ font-size:24px;
+ font-weight:600;
+ margin-top:8px;
+}
+
+/* Charts */
+.chart-section{
+ margin-top:30px;
+ display:grid;
+ grid-template-columns:2fr 1fr;
+ gap:20px;
+}
+
+.chart-box{
+ background: white;
+ padding:20px;
+ border-radius:16px;
+ box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* -------- Project Section -------- */
+.projects{
+ margin-top:30px;
+ background:white;
+ padding:20px;
+ border-radius:16px;
+ box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.project-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+}
+
+.project-card{
+ padding:18px;
+ border-radius:12px;
+ color:white;
+ font-weight:500;
+}
+
+.p1{background:linear-gradient(135deg,#6366f1,#8b5cf6);}
+.p2{background:linear-gradient(135deg,#22c55e,#4ade80);}
+.p3{background:linear-gradient(135deg,#f59e0b,#fb923c);}
+
+/* -------- Updates Logs Section -------- */
+.updates{
+ margin-top:25px;
+ background:white;
+ padding:20px;
+ border-radius:16px;
+ box-shadow:0 10px 25px rgba(0,0,0,0.08);
+ height:220px;
+ overflow-y:auto;
+}
+
+.log{
+ padding:10px;
+ border-radius:8px;
+ margin-bottom:10px;
+ font-size:14px;
+ color:white;
+}
+
+.log1{background:linear-gradient(135deg,#6366f1,#8b5cf6);}
+.log2{background:linear-gradient(135deg,#22c55e,#4ade80);}
+.log3{background:linear-gradient(135deg,#f59e0b,#fb923c);}
+.log4{background:linear-gradient(135deg,#ec4899,#f43f5e);}
+
+/* Responsive */
+@media(max-width:1000px){
+.cards{
+ grid-template-columns:repeat(2,1fr);
+}
+.project-grid{
+ grid-template-columns:1fr;
+}
+.chart-section{
+ grid-template-columns:1fr;
+}
+}
+
+@media(max-width:700px){
+.sidebar{
+ display:none;
+}
+.main{
+ margin-left:0;
+}
+.cards{
+ grid-template-columns:1fr;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+<div class="sidebar">
+<div class="logo">Dashboard</div>
+<ul>
+<li>🏠 Home</li>
+<li>📊 Analytics</li>
+<li>👥 Users</li>
+<li>⚡ Performance</li>
+<li>⚙ Settings</li>
+</ul>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+<h1>Dashboard Overview</h1>
+
+<!-- Cards -->
+<div class="cards">
+
+<div class="card card1">
+<h3>Total Revenue</h3>
+<p>$92,450</p>
+</div>
+
+<div class="card card2">
+<h3>Total Users</h3>
+<p>15,820</p>
+</div>
+
+<div class="card card3">
+<h3>Page Views</h3>
+<p>3.2M</p>
+</div>
+
+<div class="card card4">
+<h3>Rating</h3>
+<p>4.9 ⭐</p>
+</div>
+
+</div>
+
+<!-- Charts -->
+<div class="chart-section">
+
+<div class="chart-box">
+<h3>Monthly Performance</h3>
+<canvas id="lineChart"></canvas>
+</div>
+
+<div class="chart-box">
+<h3>Device Distribution</h3>
+<canvas id="barChart"></canvas>
+</div>
+
+</div>
+
+<!-- Project Section -->
+<div class="projects">
+<h2>Projects Overview</h2>
+
+<div class="project-grid">
+
+<div class="project-card p1">E-Commerce Dashboard UI</div>
+<div class="project-card p2">Analytics Web Application</div>
+<div class="project-card p3">User Management Dashboard</div>
+
+</div>
+
+<!-- Updates Logs (Below Project Section) -->
+<div class="updates">
+<h3>Latest Updates Logs</h3>
+
+<div class="log log1">Dashboard UI gradient theme updated</div>
+<div class="log log2">Analytics performance improved</div>
+<div class="log log3">Responsive layout enhanced</div>
+<div class="log log4">User interface optimization completed</div>
+<div class="log log1">Device tracking system added</div>
+<div class="log log2">Graph visualization updated</div>
+<div class="log log3">Navigation structure improved</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script>
+
+/* Line Chart */
+new Chart(document.getElementById("lineChart"),{
+ type:"line",
+ data:{
+  labels:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+  datasets:[{
+   label:"Revenue Growth",
+   data:[12,18,14,22,30,28,35,40,38,45,55,60],
+   borderColor:"#6366f1",
+   borderWidth:3,
+   tension:0.4,
+   fill:false
+  }]
+ }
+});
+
+/* Bar Chart */
+new Chart(document.getElementById("barChart"),{
+ type:"bar",
+ data:{
+  labels:["Mobile","Desktop","Tablet"],
+  datasets:[{
+   label:"Users %",
+   data:[65,25,10],
+   backgroundColor:["#6366f1","#22c55e","#f59e0b"]
+  }]
+ }
+});
+
+</script>
+
+</body>
+</html>
